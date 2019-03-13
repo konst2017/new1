@@ -1,0 +1,20 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/(web) 
+RewriteRule ^assets/(.*)$ web/assets/$1 [L]
+RewriteRule ^css/(.*)$ web/css/$1 [L]
+RewriteRule ^fonts/(.*)$ web/fonts/$1 [L]
+RewriteRule ^js/(.*)$ web/js/$1 [L]
+RewriteRule ^js3/(.*)$ web/js3/$1 [L]
+RewriteRule ^logo_brands/(.*)$ web/logo_brands/$1 [L]
+RewriteRule ^brands/(.*)$ web/brands/$1 [L]
+RewriteRule ^spezw/(.*)$ web/spezw/$1 [L]
+
+RewriteRule ^img/(.*)$ /newmag2/web/img/$1 [L]
+RewriteRule (.*) web/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . web/index.php

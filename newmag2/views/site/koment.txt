@@ -1,0 +1,17 @@
+﻿<?php
+use yii\helpers\Html;
+use yii\widgets\ListView;
+use yii\data\ActiveDataProvider;
+
+?>
+<h1>О нас <?= Html::encode($target) ?></h1>
+$dataProvider = new ActiveDataProvider([
+    'query' => komments::find(),
+    'pagination' => [
+        'pageSize' => 20,
+    ],
+]);
+echo ListView::widget([
+    'dataProvider' => $dataProvider,
+    'itemView' => '_komments',
+]);

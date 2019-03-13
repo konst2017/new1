@@ -1,0 +1,37 @@
+
+
+
+SET HTTP_PROXY=http://username:password@192.168.7.181:3128
+
+
+
+
+composer global require "fxp/composer-asset-plugin:~1.1.1"
+
+
+composer global require "fxp/composer-asset-plugin:^1.2.0" надёжный плагин
+composer create-project yiisoft/yii2-app-basic ./ 2.0.11 -устновка фрейморка
+
+composer  require --prefer-dist yiisoft/yii2 
+
+composer  require --prefer-dist mihaildev/yii2-ckeditor
+composer require --prefer-dist mihaildev/yii2-ckeditor "*"
+composer require --prefer-dist mihaildev/yii2-elfinder "*"
+
+ aleks — repo 
+
+composer require yiimaker/yii2-newsletter  - обновление yiiсофта!!!
+
+cd domains/localhost/newmag2 -каталог
+composer clearcache - очистка кеша
+yii migrate/up --migrationPath=@vendor/costa-rico/yii2-images/migrations - миграция для загрузки изображении
+https://www.yiiframework.com/download - установка компостера и фрейморка
+
+
+
+git init
+git add your_file
+git commit -m "first commit"
+git remote add origin https://github.com/konst2017/new2.git
+git push -u origin master
+git config --global http.proxy http: // proxyuser: proxypwd@proxy.server.com: 192.168.7.181:3128
